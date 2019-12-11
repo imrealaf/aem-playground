@@ -1,3 +1,9 @@
+/**
+ *  Constants
+ *
+ *  @desc global paths and component configurations
+ */
+
 const path = require("path");
 
 const ARTIFACT_ID = "aem.playground";

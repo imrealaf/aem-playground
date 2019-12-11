@@ -1,3 +1,9 @@
+/**
+ *  webpack.config.js
+ *
+ *  @desc collects all component webpack configurations and and enabled them for the `build:all` command
+ */
+
 const constants = require("./constants");
 
 const configs = [];

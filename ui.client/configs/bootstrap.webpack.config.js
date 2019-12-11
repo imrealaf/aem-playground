@@ -1,39 +1,24 @@
 /**
- *  sample.webpack.config.js
+ *  boostrap.webpack.config.js
  *
  *  @type webpack configuration
- *  @desc dev and build configurations for sample component
+ *  @desc dev and build configurations for boostrap custom sass build
  */
 
-const path = require("path");
+const fs = require("fs");
+const EventHooksPlugin = require("event-hooks-webpack-plugin");
 const constants = require("../constants");
 
-const NAME = "sample";
-const BUILD_DIR = `${constants.CLIENTLIBS_PATH}/${NAME}`;
+const NAME = "bootstrap";
+const BUILD_DIR = `${constants.CLIENTLIBS_PATH}/vendor/${NAME}`;
 
 module.exports = {
-  entry: [`${constants.APP_DIR}/components/${NAME}/index.ts`, `${constants.STYLE_DIR}/components/${NAME}/index.scss`],
-  resolve: {
-    extensions: [".ts", ".js", ".json", ".tsx", ".jsx"]
-  },
+  entry: [`${constants.STYLE_DIR}/vendor/${NAME}/index.scss`],
   output: {
-    path: BUILD_DIR,
-    filename: `js/${NAME}.js`
+    path: BUILD_DIR
   },
   module: {
     rules: [
-      {
-        test: /\.(t|j)sx?$/,
-        include: constants.APP_DIR,
-        loader: "ts-loader",
-        exclude: path.resolve("../node_modules")
-      },
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        include: constants.APP_DIR,
-        loader: "source-map-loader"
-      },
       {
         test: /\.scss$/,
         use: [
@@ -67,5 +52,15 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new EventHooksPlugin({
+      "done": () => {
+        // delete unwanted js file
+        fs.unlink(`${BUILD_DIR}/main.js`, () => {
+            console.log("main.js deleted");
+        });
+      }
+    })
+  ]
 };

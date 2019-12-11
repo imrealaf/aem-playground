@@ -99,28 +99,28 @@
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
-        <dependency>
+        <!-- <dependency>
             <groupId>whoisaf</groupId>
             <artifactId>whoisaf.aem.playground.core</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency> -->
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>uber-jar</artifactId>
             <classifier>apis</classifier>
         </dependency>
-
+<!-- 
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.all</artifactId>
             <type>zip</type>
-        </dependency>
-        <dependency>
+        </dependency> -->
+        <!-- <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples</artifactId>
             <type>zip</type>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>javax.jcr</groupId>
             <artifactId>jcr</artifactId>

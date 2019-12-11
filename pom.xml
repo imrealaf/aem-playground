@@ -25,9 +25,9 @@
     <description>aem.playground</description>
 
     <modules>
-        <module>core</module>
+        <!-- <module>core</module> -->
         <module>ui.apps</module>
-        <module>ui.content</module>
+        <!-- <module>ui.content</module> -->
         <!-- <module>it.tests</module>
         <module>it.launcher</module> -->
     </modules>
@@ -534,18 +534,18 @@
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.all</artifactId>
                 <type>zip</type>
                 <version>2.3.2</version>
-            </dependency>
-            <dependency>
+            </dependency> -->
+            <!-- <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.examples</artifactId>
                 <type>zip</type>
                 <version>2.3.2</version>
-            </dependency>
+            </dependency> -->
             <!-- Apache Sling Dependencies -->
             <dependency>
                 <groupId>org.apache.sling</groupId>
