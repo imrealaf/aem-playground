@@ -1,12 +1,11 @@
 const path = require("path");
+const constants = require("../constants");
 
 const NAME = "sample";
-const BUILD_DIR = path.resolve("./dist");
-const APP_DIR = path.resolve("./src", "app");
-const STYLE_DIR = path.resolve("./src", "styles");
+const BUILD_DIR = `${constants.CLIENTLIBS_PATH}/${NAME}`;
 
 module.exports = {
-  entry: [`${APP_DIR}/components/${NAME}/index.ts`, `${STYLE_DIR}/components/${NAME}/index.scss`],
+  entry: [`${constants.APP_DIR}/components/${NAME}/index.ts`, `${constants.STYLE_DIR}/components/${NAME}/index.scss`],
   resolve: {
     extensions: [".ts", ".js", ".json", ".tsx", ".jsx"]
   },
@@ -18,14 +17,14 @@ module.exports = {
     rules: [
       {
         test: /\.(t|j)sx?$/,
-        include: APP_DIR,
+        include: constants.APP_DIR,
         loader: "ts-loader",
         exclude: path.resolve("../node_modules")
       },
       {
         enforce: "pre",
         test: /\.js$/,
-        include: APP_DIR,
+        include: constants.APP_DIR,
         loader: "source-map-loader"
       },
       {
