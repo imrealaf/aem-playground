@@ -1,6 +1,6 @@
-# Sample AEM project template
+# AEM Playground by whoisaf
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+This is a project developed for AEM-based applications. In it, you will find custom components that extend or exceed the standard Core Components.
 
 ## Modules
 
