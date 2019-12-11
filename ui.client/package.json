@@ -1,0 +1,31 @@
+{
+  "name": "ui.client",
+  "version": "1.0.0",
+  "description": "Clientlibs and front end scripts for AEM",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config=configs/$CONFIG.webpack.config.js --mode=development --watch",
+    "build": "webpack --config=configs/$CONFIG.webpack.config.js --mode=production",
+    "build:all": "parallel-webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Faria",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "css-loader": "^3.3.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "node-sass": "^4.13.0",
+    "parallel-webpack": "^2.4.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

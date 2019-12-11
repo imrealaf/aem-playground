@@ -1,4 +1,4 @@
-# AEM Playground by whoisaf
+# AEM Playground
 
 This is a project developed for AEM-based applications. In it, you will find custom components that extend or exceed the standard Core Components.
 
